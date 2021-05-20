@@ -13,65 +13,12 @@ pr:
 
 name: $(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
 
-stages:
-  - stage: Testing
-    jobs:
-      - template: azure-pipeline.template.yaml
-        parameters:
-          name: 'linux_pr'
-          displayName: 'PR Validation'
-          vmImage: 'ubuntu-16.04'
-          scriptFileName: ./build.sh
-          scriptArgs: all
 
-  # - stage: Deployment
-
-  #   variables:
-  #     - group: PulumiKeys
-  #     - name: pulumi.access.token
-  #       value: $(pulumiaccesstoken)
-  #     - name: pulumiVersion
-  #       value: 3.2.1
-
-  #   jobs:
-  #     - job: pulumiPreview
-  #       displayName: "Pulumi Preview"
-  #       pool:
-  #         vmImage: ubuntu-16.04
-  #       steps:
-  #           - checkout: self  # self represents the repo where the initial Pipelines YAML file was found
-  #             clean: false  # whether to fetch clean each time
-  #             submodules: recursive  # set to 'true' for a single level of submodules or 'recursive' to get submodules of submodules
-  #             persistCredentials: true
-
-  #           - task: AzureCLI@2
-  #             displayName: Azure CLI
-  #             inputs:
-  #               azureSubscription: "SdkbinInfrastructure"
-  #               scriptType: bash
-  #               scriptLocation: inlineScript
-  #               addSpnToEnvironment: true # emits ServicePrincipal data into environment
-  #               inlineScript: |
-  #                 ARM_SUBSCRIPTION_ID=$(az account show --query 'id' --output tsv)
-  #                 echo "##vso[task.setvariable variable=ARM_SUBSCRIPTION_ID]${ARM_SUBSCRIPTION_ID}"
-  #                 echo "##vso[task.setvariable variable=AZURE_CLIENT_ID]${servicePrincipalId}"
-  #                 echo "##vso[task.setvariable variable=AZURE_CLIENT_SECRET]${servicePrincipalKey}"
-  #                 echo "##vso[task.setvariable variable=AZURE_TENANT_ID]${tenantId}"
-
-  #           - task: Bash@3
-  #             displayName: Publish Code
-  #             inputs:
-  #               filePath: ./build.sh
-  #               arguments: BuildRelease
-  #             continueOnError: false
-
-  #           - task: Pulumi@1
-  #             displayName: "Pulumi Up"
-  #             inputs:
-  #               azureSubscription: "pbstripe - Azure"
-  #               command: "preview" # set the Docker tag version equal to the current release tag
-  #               cwd: "src/Petabridge.Collector.Infra"
-  #               stack: "petabridge/Petabridge.Collector.Infra/dev" #do QA cluster
-  #               versionSpec: $(pulumiVersion)
-  #             env:
-  #               AZURE_KEYVAULT_AUTH_VIA_CLI: false
+jobs:
+  - template: azure-pipeline.template.yaml
+    parameters:
+      name: 'linux_pr'
+      displayName: 'PR Validation'
+      vmImage: 'ubuntu-16.04'
+      scriptFileName: ./build.sh
+      scriptArgs: all
