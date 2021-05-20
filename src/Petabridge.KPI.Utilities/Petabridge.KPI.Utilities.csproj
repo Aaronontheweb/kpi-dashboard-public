@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<Import Project="..\common.props" />
+	<PropertyGroup>
+		<TargetFramework>$(TargetRuntime)</TargetFramework>
+		<!-- Has to be .NET 5 in order for record compilation to work
+	       See https://stackoverflow.com/questions/64749385/predefined-type-system-runtime-compilerservices-isexternalinit-is-not-defined
+		-->
+		<Description>
+			A set of not exactly "business" rules, but functional tools for performing work such as serialization,
+			data formatting, datetime canonicalization, and things that aren't specific to any individual KPI or metric.
+		</Description>
+		<LangVersion>9.0</LangVersion>
+
+	</PropertyGroup>
+</Project>

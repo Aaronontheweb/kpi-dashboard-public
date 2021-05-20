@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Petabridge.KPI.Models", "src\Petabridge.KPI.Models\Petabridge.KPI.Models.csproj", "{42957E12-4D2E-4A02-82DE-AA989ABEAEC8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Petabridge.KPI.Collector.Functaculous", "src\Petabridge.KPI.Collector.Functaculous\Petabridge.KPI.Collector.Functaculous.csproj", "{CF8CCBBE-8FAD-4F90-8801-4D84C647FAC1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Petabridge.Collector.Infra", "src\Petabridge.Collector.Infra\Petabridge.Collector.Infra.csproj", "{E8C9EAE6-9409-45A4-A4AA-A46B12E89449}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42957E12-4D2E-4A02-82DE-AA989ABEAEC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42957E12-4D2E-4A02-82DE-AA989ABEAEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42957E12-4D2E-4A02-82DE-AA989ABEAEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42957E12-4D2E-4A02-82DE-AA989ABEAEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF8CCBBE-8FAD-4F90-8801-4D84C647FAC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF8CCBBE-8FAD-4F90-8801-4D84C647FAC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF8CCBBE-8FAD-4F90-8801-4D84C647FAC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF8CCBBE-8FAD-4F90-8801-4D84C647FAC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8C9EAE6-9409-45A4-A4AA-A46B12E89449}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8C9EAE6-9409-45A4-A4AA-A46B12E89449}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8C9EAE6-9409-45A4-A4AA-A46B12E89449}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8C9EAE6-9409-45A4-A4AA-A46B12E89449}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C39EEBD2-FF75-4E29-831D-AFD34F5FBBC0}
+	EndGlobalSection
+EndGlobal

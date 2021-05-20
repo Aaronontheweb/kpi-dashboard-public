@@ -1,0 +1,21 @@
+config:
+  Petabridge.Collector.Infra:GoogleAnalytics:
+    Sites:
+    - Domain: domain1.com
+      ViewId: 123232
+    - Domain: domain2.com
+      ViewId: 4545454
+  Petabridge.Collector.Infra:GoogleAnalytics.Key:
+    secure: 
+  Petabridge.Collector.Infra:GoogleAnalytics.ServiceAccount: 
+  Petabridge.Collector.Infra:InfluxDb.Bucket: kpi-db
+  Petabridge.Collector.Infra:InfluxDb.ConnectionString: https://eastus-1.azure.cloud2.influxdata.com/
+  Petabridge.Collector.Infra:InfluxDb.Org: 
+  Petabridge.Collector.Infra:InfluxDb.Token:
+    secure: 
+  Petabridge.Collector.Infra:Mailchimp.ApiKey:
+    secure: 
+  Petabridge.Collector.Infra:azureSubscriptionId: 
+  Petabridge.Collector.Infra:azureTenantId: 
+  Petabridge.Collector.Infra:resourceGroupName: kpi-development
+  azure-native:location: EastUS

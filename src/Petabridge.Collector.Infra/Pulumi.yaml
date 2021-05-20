@@ -1,0 +1,3 @@
+name: Stannardian.Collector.Infra
+runtime: dotnet
+description: Chron-based Azure Function for collecting KPI data in InfluxDb

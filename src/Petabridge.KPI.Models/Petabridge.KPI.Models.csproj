@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\common.props" />
+  <PropertyGroup>
+    <TargetFramework>$(TargetRuntime)</TargetFramework>
+	  <!-- Has to be .NET 5 in order for record compilation to work
+	       See https://stackoverflow.com/questions/64749385/predefined-type-system-runtime-compilerservices-isexternalinit-is-not-defined
+	  -->
+    <LangVersion>9.0</LangVersion>
+
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Akka" Version="1.4.19" />
+    <PackageReference Include="Google.Apis.AnalyticsReporting.v4" Version="1.51.0.2197" />
+    <PackageReference Include="MailChimp.Net.V3" Version="5.1.0" />
+    <PackageReference Include="InfluxDB.Client" Version="1.18.0" />
+  </ItemGroup>
+
+</Project>

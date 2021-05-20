@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: influxdb
+spec:
+  type: LoadBalancer
+  selector: 
+    app: influxdb
+  ports:
+    - name: http
+      port: 8086
+      targetPort: 8086
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: influxdb
+spec:
+  selector:
+    matchLabels:
+      app: influxdb
+  replicas: 1
+  serviceName: influx
+  template:
+    metadata:
+      labels:
+        app: influxdb
+    spec:
+      containers:
+        - name: influxdb
+          image: influxdb:2.0
+          ports:
+            - name: http
+              containerPort: 8086
+              protocol: TCP
+            - containerPort: 2003
+          volumeMounts:
+            - name: data
+              mountPath: /influxdb/
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+          env:
+          - name: DOCKER_INFLUXDB_INIT_BUCKET
+            value: "kpi-db"
+          - name: DOCKER_INFLUXDB_INIT_USERNAME
+            value: "admin"
+          - name: DOCKER_INFLUXDB_INIT_PASSWORD
+            value: "admin2021"
+          - name: DOCKER_INFLUXDB_INIT_ORG
+            value: "petabridge"
+          - name: DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
+            value: "fffffff"
+          - name: DOCKER_INFLUXDB_INIT_MODE
+            value: "setup"
+
+      volumes:
+        - name: data
+          emptyDir: {}

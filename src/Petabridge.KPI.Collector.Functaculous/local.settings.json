@@ -1,0 +1,25 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage":
+      "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "FUNCTIONS_EXTENSION_VERSION": "~3",
+    "ConnectionStrings__AzureWebJobsStorage":
+      "DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://127.0.0.1:10000/devstoreaccount1;",
+    "InfluxDb__Bucket": "kpi-db",
+    "InfluxDb__Org": "petabridge",
+    "InfluxDb__ConnectionString": "http://localhost:8086",
+    "InfluxDb__Token": "fffffff",
+    "GoogleAnalytics__ServiceAccount": "",
+    "GoogleAnalytics__Sites__0__ViewId": "",
+    "GoogleAnalytics__Sites__0__Domain": "",
+    "GoogleAnalytics__Sites__1__ViewId": "",
+    "GoogleAnalytics__Sites__1__Domain": "",
+    "GoogleAnalytics__Sites__2__ViewId": "",
+    "GoogleAnalytics__Sites__2__Domain": "",
+    "GoogleAnalytics__Sites__3__ViewId": "",
+    "GoogleAnalytics__Sites__3__Domain": ""
+  },
+  "ConnectionStrings": {}
+}
