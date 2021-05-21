@@ -75,8 +75,8 @@ PS> kubectl get all -n kpi-collector
 
 By default we have the following default services running inside `kpi-collector`:
 
-* InfluXDB 2.0 - view at http://localhost:8086
-* Grafana - view at http://localhost:3000
+* InfluXDB 2.0 - view at http://localhost:8086 with **Username: admin, Password: admin2021**
+* Grafana - view at http://localhost:3000 **Username: admin, Password: admin**
 * Azurite Azure Storage Emulator - with blob services hosted at http://localhost:10000
 
 All of these values are configured to be used by default during local development of the `KpiCollector` Azure Function, via [`local.settings.json`](src/Petabridge.KPI.Collector.Functaculous/local.settings.json)
