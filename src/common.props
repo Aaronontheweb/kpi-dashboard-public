@@ -16,6 +16,6 @@
     <PbmVersion>0.8.2</PbmVersion>
     <FluentAssertionsVersion>5.10.3</FluentAssertionsVersion>
     <PhobosVersion>1.1.2</PhobosVersion>
-    <MicrosoftExtensionsVersion>3.1.8</MicrosoftExtensionsVersion>
+    <MicrosoftExtensionsVersion>6.0.0</MicrosoftExtensionsVersion>
   </PropertyGroup>
 </Project>
